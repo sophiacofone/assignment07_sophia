@@ -10,6 +10,8 @@ The folder <code>/folium_outputs</code> contains the HTML outputs of the functio
 
 The folder <code>/docs</code> contains the test HTML website that uses the folium maps.
 
+The folder <code>/img</code> contains screenshots of the outputs.
+
 # Explanation of the python files
 All of these files do roughly the same thing. They all contain code that:
 1. Reads in json data
@@ -25,25 +27,38 @@ From the command line:
 python broadband_tier.py
 ```
 The code will first generate a matplotlib object. Once you are done viewing it, please close it and the code will generate the folium HTML file.
-The same steps can be done for 
+The same steps can be done for: 
 ```
 python broadband_grant.py
 python broadband_may_under.py
 python broadband_underserved.py
 ```
-#Outputs:
+# Outputs:
 Simple plots:
 Tier 0-5
-![Teir1](iris.png)
-![Teir2](iris.png)
-Teir 0-1
+
+![Teir1](img/tier.png)
+![Teir2](img/folium_5.png)
+![Teir2](img/folium_2.png)
 
 Grant
-May be underserved
-Underserved
-![Iris](iris.png)
 
-#Issues
-There seems to be a problem with large json layers and folium. For the code <code>broadband_underserved.py</code> and <code>broadband_may_under.py</code>, the folium part is commented out becuase it doesn't quite work. It should work in the same way as the grant and teir code, but I suspect that the layers are just too large
+![g1](img/grant.png)
+![g2](img/folium_grant.png)
+
+
+May be underserved
+
+![g1](img/may_be.png)
+
+Underserved
+
+![g1](img/under.png)
+
+# HTML test
+To see the HTML test website, please navigate to the <code>/docs</code> folder and open the <code>index.html</code> file. A test website with 2 of the folium maps should open.
+
+# Issues
+There seems to be a problem with large json layers and folium. For the code <code>broadband_underserved.py</code> and <code>broadband_may_under.py</code>, the folium part is commented out becuase it doesn't quite work. It should work in the same way as the grant and tier code, but I suspect that the layers are just too large, therefore those were not included in the HTML site and the output screenshots. I also struggled to upload the <code>tier_map_all_layer.html</code> file because it is too large for github. It should still work locally. Finally, when it came to testing out the HTML site, using the <code>tier_map_all_layer.html</code> file made it very laggy, so I instead made a version with only 2 layers for the prototype.
   
    
