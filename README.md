@@ -96,6 +96,6 @@ The user can change the first argument to any county and the second, third, and 
 The HTML folium outputs are <code>single_map.html</code> and <code>layer_map.html</code> 
 
 Single folium
-[](img/single.png)
+![](img/single.png)
 Layer folium
-[](img/single.png)
+![](img/single.png)
