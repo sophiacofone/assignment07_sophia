@@ -60,5 +60,42 @@ To see the HTML test website, please navigate to the <code>/docs</code> folder a
 
 # Issues
 There seems to be a problem with large json layers and folium. For the code <code>broadband_underserved.py</code> and <code>broadband_may_under.py</code>, the folium part is commented out becuase it doesn't quite work. It should work in the same way as the grant and tier code, but I suspect that the layers are just too large, therefore those were not included in the HTML site and the output screenshots. I also struggled to upload the <code>tier_map_all_layer.html</code> file because it is too large for github. It should still work locally. Finally, when it came to testing out the HTML site, using the <code>tier_map_all_layer.html</code> file made it very laggy, so I instead made a version with only 2 layers for the prototype.
-  
-   
+
+# assignment08_sophia
+
+For this assignment the goal was to subet the data by Maine county. The file <code>county_subsets.py</code> contains several functions that create simple matplotlib plots and folium plots by county. 
+
+# Running the code
+To generate the simple matplotlib plot with one layer:
+```
+simple_plot('Oxford',url_un1)
+plt.show()
+```
+The user can change the first argument to any county and the second argument to any broadband data file (out of the 5 files I was assigned).
+
+To generate the simple matplotlib plot with three layers:
+```
+layer_plot('Oxford',urlt4,urlt5,url_un1)
+plt.show()
+```
+The user can change the first argument to any county and the second, third, and fourth argument to any broadband data file (out of the 5 files I was assigned).
+
+To generate the folium plot with one layer:
+```
+single_folium_map('Oxford',url_un1)
+```
+The user can change the first argument to any county and the second, third, and fourth argument to any broadband data file (out of the 5 files I was assigned).
+
+To generate the folum plot with three layers:
+```
+layer_folium_map('Oxford',urlt4,urlt5,url_un1)
+```
+The user can change the first argument to any county and the second, third, and fourth argument to any broadband data file (out of the 5 files I was assigned).
+
+# Output
+The HTML folium outputs are <code>single_map.html</code> and <code>layer_map.html</code> 
+
+Single folium
+[](img/single.png)
+Layer folium
+[](img/single.png)
